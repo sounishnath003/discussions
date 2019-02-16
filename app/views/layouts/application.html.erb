@@ -14,8 +14,87 @@
   </head>
 
   <body>
-  <%= debug(@discussions) %>
+  <%#= debug(@discussions) %>
+
+  <% if !user_signed_in? %>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="./CDMbA57p.png">
+                        <!-- <img src="./CDMbA57p.png" class="is-5" alt="Logo"> -->
+                      <h2 class="subtitle is-5 has-text-bold" style="font-family: monospace;">Discussions</h2>
+                    </a>
+                <span class="navbar-burger burger" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+                </span>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item is-active">
+                            Home
+                        </a>
+                    <a class="navbar-item">
+                            Examples
+                        </a>
+                    <a class="navbar-item">
+                            Features
+                        </a>
+                    <a class="navbar-item">
+                            Team
+                        </a>
+                    <a class="navbar-item">
+                            Archives
+                        </a>
+                    <a class="navbar-item">
+                            Help
+                        </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                                Account
+                            </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                    Dashboard
+                                </a>
+                            <a class="navbar-item">
+                                    Profile
+                                </a>
+                            <a class="navbar-item">
+                                    Settings
+                                </a>
+                            <hr class="navbar-divider">
+                            <div class="navbar-item">
+                                Logout
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAV -->
+
+  <% end %>
+
+
     <div class="container rounded p-10">
+<!--nav bar-->
+  <% if !user_signed_in? %>
+    <section class="hero is-secondary shadow-lg is-medium is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">A Blog Purpose Website Build on Vue and Rails. <br></h1>
+                <h2 class="subtitle is-4">For Designers and Developers Campire Discussion Forum</h2>
+            </div>
+        </div>
+    </section>
+
+  <% end %>
+
+
+
       <%= yield %>
     </div>
   </body>
