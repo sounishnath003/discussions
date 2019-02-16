@@ -1,10 +1,11 @@
 class DiscussionsController < ApplicationController
   before_action :set_discussion, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
 
   # GET /discussions
   # GET /discussions.json
   def index
-    @discussions = Discussion.all
+    @discussions = Discussion.current_user.order("created_at DESC")
   end
 
   # GET /discussions/1
@@ -14,7 +15,7 @@ class DiscussionsController < ApplicationController
 
   # GET /discussions/new
   def new
-    @discussion = Discussion.new
+    @discussion = Discussion.current_user.build
   end
 
   # GET /discussions/1/edit

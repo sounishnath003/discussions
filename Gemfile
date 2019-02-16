@@ -31,6 +31,7 @@ gem 'bulma-rails'
 gem 'foreman'
 gem "wysiwyg-rails"
 gem "font-awesome-sass"
+gem "will_paginate"
 
 # Use Active Storage variant
  gem 'image_processing', '~> 1.2'
