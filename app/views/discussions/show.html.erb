@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<div class="article is-centered ">
+  <p>
+    <strong>Title:</strong>
+    <%= @discussion.title %>
+  </p>
+
+  <div class="text">
+    <%= @discussion.content %>
+  </div>
+
+</div>
+
+</div>
+
+<%= link_to 'Edit', edit_discussion_path(@discussion) %> |
+<%= link_to 'Back', discussions_path %>
