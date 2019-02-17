@@ -5,7 +5,7 @@ class DiscussionsController < ApplicationController
   # GET /discussions
   # GET /discussions.json
   def index
-    @discussions = Discussion.current_user.order("created_at DESC")
+    @discussions = current_user.discussions.order("created_at DESC")
   end
 
   # GET /discussions/1
@@ -15,7 +15,7 @@ class DiscussionsController < ApplicationController
 
   # GET /discussions/new
   def new
-    @discussion = Discussion.current_user.build
+    @discussion = Discussion.new
   end
 
   # GET /discussions/1/edit
@@ -25,8 +25,8 @@ class DiscussionsController < ApplicationController
   # POST /discussions
   # POST /discussions.json
   def create
-    @discussion = Discussion.new(discussion_params)
-
+    @discussion = current_user.discussions.build(discussion_params)
+    @discussion.user_id = current_user.id
     respond_to do |format|
       if @discussion.save
         format.html { redirect_to @discussion, notice: 'Discussion was successfully created.' }
