@@ -11,7 +11,7 @@ Things you may want to cover:
 
 * Configuration
 
-![Discussion UI Design](1.PNG)
+![Discussions UI](1.PNG)
 
 * Database creation
 
@@ -22,5 +22,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
