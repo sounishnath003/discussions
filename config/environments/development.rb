@@ -61,7 +61,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # for devise
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = {host: 'localhost', port: 5000}
    config.action_mailer.delivery_method = :smtp
 
   config.hosts << "48948537.ngrok.io"
@@ -76,7 +76,7 @@ Rails.application.configure do
       password: "WeakPass1234!"
   }
 
-  config.action_mailer.default_url_options = {host: "localhost:3000"}
+  config.action_mailer.default_url_options = {host: "localhost:5000"}
 
 
 end

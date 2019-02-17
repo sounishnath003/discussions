@@ -1,11 +1,10 @@
 <section class="mb-10">
-  <div class="container is-centered rounded">
+  <div class="container is-centered rounded shadow">
     <br>
     <h3 class="title leading-tight is-4 has-text-centered text-indigo-darker text-xl">Welcome <%= current_user.username %> 👏</h3>
     <h3 class="subtitle leading-tight is-6 has-text-centered mt-5 py-3 text-indigo-dark text-sm">Its a new modern UI designed discussion webapp in one platform for
-      Developers and as well as Designers. We made abstract your commiunity workspace more bigger and more organize. Spread Love 🎈 <br> <br>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda at autem, cumque dicta, eligendi, est illum iure necessitatibus.
-    </h3>
+      Developers and as well as Designers. We made abstract your commiunity workspace more bigger and more organize.
+      Spread Love 🎈 <br> <br></h3>
   </div>
 </section>
 
@@ -15,16 +14,16 @@
         <%= discussions.title %>
     <% end %>
     <!-- START ARTICLE -->
-    <div class="card article">
+    <div class="card article shadow-lg rounded p-2">
       <div class="card-content">
         <div class="media">
           <div class="media-center is-rounded ">
-            <img src="CDMbA57p.png" class=" rounded" alt="Placeholder image">
+            <%= image_tag "rails.png", alt: "placeholder image", class: "rounded" %>
           </div>
           <div class="media-content has-text-centered">
             <p class="title article-title">Sapien eget mi proin sed 🔱</p>
             <p class="subtitle is-6 article-subtitle">
-              <a href="#">@daria</a> on February 17, 2018
+              <a href="#">@<%= current_user.username %> </a> on February 17, 2018
             </p>
           </div>
         </div>
