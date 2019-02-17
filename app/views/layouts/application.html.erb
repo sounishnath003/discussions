@@ -14,14 +14,18 @@
   </head>
 
   <body>
-  <%#= debug(@discussions) %>
+  <%= debug @users %>
 
-  <% if !user_signed_in? %>
+  <!--Nav bar start-->
     <nav class="navbar">
         <div class="container">
             <div class="navbar-brand">
 
-            <%= link_to "Discussions", root_path, class: "navbar-item mt-3 subtitle is-5 has-text-bold" %>
+            <%= link_to root_path do %>
+                    <div class="navbar-item">
+                      <h2 class="subtitle is-5 has-text-bold" style="font-family: monospace;">Discussions</h2>
+                    </div>
+            <% end %>
 
                 <span class="navbar-burger burger" data-target="navbarMenu">
                 <span></span>
@@ -53,29 +57,26 @@
                         <a class="navbar-link">
                                 Account
                             </a>
+                        <% unless user_signed_in? %>
                         <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                    Dashboard
+                            <a class="navbar-item text-white bg-orange hover:bg-orange-dark" href="/users/sign_in">
+                                    Log In
                                 </a>
-                            <a class="navbar-item">
-                                    Profile
-                                </a>
-                            <a class="navbar-item">
+                            <%# <a class="navbar-item">
                                     Settings
-                                </a>
+                                </a> %>
                             <hr class="navbar-divider">
-                            <div class="navbar-item">
-                                Logout
+                            <div class="navbar-item bg-red text-white hover:bg-red-dark">
+                               <a href="/users/sign_up" class="text-white hover:text-white">Sign Up</a>
                             </div>
                         </div>
+                        <% end %>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
     <!-- END NAV -->
-
-  <% end %>
 
 
     <div class="container rounded p-10">

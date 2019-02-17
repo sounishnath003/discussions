@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+
+<% if user_signed_in? %>
+  <p id="notice"><%= notice %></p>
 
 <h1>Discussions</h1>
 
@@ -25,3 +27,5 @@
 <br>
 
 <%= link_to 'New Discussion', new_discussion_path, {:class => "button is-primary btn rounded border-b-4 border-b-red-light "} %>
+
+<% end %>
