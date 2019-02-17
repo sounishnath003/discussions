@@ -29,6 +29,7 @@ gem 'better_errors'
 gem 'sidekiq'
 gem 'bulma-rails'
 gem 'foreman'
+gem "binding_of_caller"
 gem "wysiwyg-rails"
 gem "font-awesome-sass"
 gem "will_paginate"

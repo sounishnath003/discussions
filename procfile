@@ -1,2 +1,2 @@
-web : rails s
-webpacker : node_modules/.bin/webpack-dev-server
+web: rails s
+webpacker: node_modules/.bin/webpack-dev-server

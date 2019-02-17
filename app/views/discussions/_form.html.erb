@@ -8,10 +8,17 @@
   </div>
 
     <div class="form-inputs">
-    <%= f.rich_text_area :content, input_html: {id: "content", class: "textarea"}, wrapper: false %>
+    <%= f.input :content, input_html: {id: "content", class: "textarea is-warning"}, wrapper: false, label_html: { class: "label"} %>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit, class: "button is-danger mt-5" %>
   </div>
 <% end %>
+
+
+<script>
+
+$('#content').frolaEditor();
+
+</script>

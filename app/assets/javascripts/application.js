@@ -30,6 +30,6 @@
 //= require plugins/video.min.js
 //= require_tree .
 
-document.addEventListener('turbolinks:load', () => {
-  $('#content').froalaEditor();
-});
+@import 'frola.js.coffee'
+
+$('#content').froalaEditor();
