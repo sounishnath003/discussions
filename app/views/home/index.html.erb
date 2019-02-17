@@ -1,6 +1,11 @@
-<div class="flex flex-wrap items-center justify-center mt-10 ">
+<% unless user_signed_in? %>
+  <div class="flex flex-wrap items-center justify-center mt-10 ">
   <%= link_to "Log In", new_user_session_path, {:class => "button font-bold btn mr-10 is-danger shadow-lg p-5 text-centered"} %>
 
   <%= link_to "Sign Up", new_user_registration_path, {:class => "button btn bg-blue text-white font-bold leading-tight shadow-lg p-5 text-centered"} %>
 
-</div>
+  </div>
+
+  <% else %>
+  <%= link_to "Log Out", destroy_user_session_path, method: :delete, data: {confirm: "Are You Sure #{current_user.username} to logout?"}, class: "button is-danger p-5 rounded shadow-lg hover:bg-red-lighter" %>
+<% end %>

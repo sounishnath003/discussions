@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates :username, presence: :true, uniqueness: { case_sensitive: false }
   validates :email, presence: :true, uniqueness: { case_sensitive: false }
   before_save {self.email = email.downcase}
+  before_save {self.username = username.downcase}
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
 
   devise :database_authenticatable, :registerable,

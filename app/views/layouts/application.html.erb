@@ -20,10 +20,9 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" href="./CDMbA57p.png">
-                        <!-- <img src="./CDMbA57p.png" class="is-5" alt="Logo"> -->
-                      <h2 class="subtitle is-5 has-text-bold" style="font-family: monospace;">Discussions</h2>
-                    </a>
+
+            <%= link_to "Discussions", root_path, class: "navbar-item mt-3 subtitle is-5 has-text-bold" %>
+
                 <span class="navbar-burger burger" data-target="navbarMenu">
                 <span></span>
                 <span></span>
@@ -82,7 +81,7 @@
     <div class="container rounded p-10">
 <!--nav bar-->
   <% if !user_signed_in? %>
-    <section class="hero is-secondary shadow-lg is-medium is-bold">
+    <section class="hero rounded is-secondary shadow-lg is-medium is-bold">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title">A Blog Purpose Website Build on Vue and Rails. <br></h1>
