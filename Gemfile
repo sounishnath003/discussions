@@ -33,6 +33,7 @@ gem "binding_of_caller"
 gem "wysiwyg-rails"
 gem "font-awesome-sass"
 gem "will_paginate"
+gem "jquery-rails"
 
 # Use Active Storage variant
  gem 'image_processing', '~> 1.2'
