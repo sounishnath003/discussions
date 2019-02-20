@@ -15,7 +15,7 @@
   </head>
 
   <body>
-  
+
   <!--Nav bar start-->
     <nav class="navbar">
         <div class="container">
@@ -38,9 +38,7 @@
                     <a class="navbar-item is-active">
                             Home
                         </a>
-                    <a class="navbar-item">
-                            Examples
-                        </a>
+                            <%= link_to "Discussions", discussions_path,  class: "navbar-item link text-black" if (user_signed_in?) %>
                     <a class="navbar-item">
                             Features
                         </a>
@@ -71,7 +69,7 @@
                                         </div>
                             <% else %>
                                     <div class="navbar-item bg-red text-white hover:bg-red-dark">
-                                    <%= link_to "Log out", destroy_user_session_path, method: :delete, data: {confirm: "You are about to logout!"}, class: "link text-white" %>
+                                    <%= link_to "Log out", destroy_user_session_path, method: :delete, data: {confirm: "Goodbye #{current_user.username} !"}, class: "link text-white" %>
                                     </div>
                                 </div>
                             <% end %>
