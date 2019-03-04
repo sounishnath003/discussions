@@ -9,13 +9,16 @@
 </section>
 
 <section>
-  <div class="container is-centered bg-white shadow-lg border-b-4 border-bg-grey-lighter">
+  <div class="container is-centered rounded bg-white shadow-lg border-b-4 border-bg-grey-lighter">
     <% @discussions.each do |discussions| %>
       <div class="bg-indigo-lighter mb-0">
-        <h3 class="clearfix leading-loose text-5xl ml-6 text-black"><%= discussions.title %></h3>
+        <h3 class="clearfix leading-loose text-5xl ml-6 text-black"><%= link_to @discussion do  %>
+          <%= discussions.title %>
+          <% end %>
+          </h3>
       </div>
-      <div class="clearfix flex inline-flex"><%= gravatar_for discussions.user.email %></div>
-      <div class="flex flex-wrap inline-flex mr-4 bg-yellow mb-3 px-6 rounded">
+      <div class="clearfix flex inline-flex justify-center align-items"><%= gravatar_for discussions.user.email %></div>
+      <div class="flex flex-wrap inline-flex pin pin-r mr-4 bg-yellow mb-3 px-6 rounded">
         <p class="font-bold text-black flex-wrap"><%= discussions.user.username %>
           . <%= format_date_discussion(discussions.updated_at) %> </p>
       </div>
