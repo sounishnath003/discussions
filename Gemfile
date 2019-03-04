@@ -34,7 +34,7 @@ gem "wysiwyg-rails"
 gem "font-awesome-sass"
 gem "will_paginate"
 gem "jquery-rails"
-
+gem "mini_magick"
 # Use Active Storage variant
  gem 'image_processing', '~> 1.2'
 

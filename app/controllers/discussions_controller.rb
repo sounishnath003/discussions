@@ -5,7 +5,11 @@ class DiscussionsController < ApplicationController
   # GET /discussions
   # GET /discussions.json
   def index
+    if user_signed_in?
     @discussions = current_user.discussions.order("created_at DESC")
+    else
+      @discussions = Discussion.all.order("created_at DESC")
+    end
   end
 
   # GET /discussions/1
