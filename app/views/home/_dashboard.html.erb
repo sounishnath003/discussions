@@ -14,10 +14,11 @@
       <div class="bg-indigo-lighter mb-2">
         <h3 class="clearfix leading-loose text-5xl ml-6 text-black"><%= discussions.title %></h3>
       </div>
-      <div class="flex flex-wrap inline-flex">
-            <img src="rails.png" class="rounded-full p-3 mr-3">
-            <p><%= discussions.user.username%></p> . <%= discussions.updated_at.format_date_discussion "%B %d, %Y" %>
+      <div class="flex flex-wrap inline-flex mr-4 bg-yellow mb-3 px-6 rounded">
+        <img src="" class="rounded-full p-3">
+        <p class="font-bold text-black"><%= discussions.user.username%> . <%= format_date_discussion(discussions.updated_at) %> </p>
       </div>
+
       <span class="text-indigo-darker text-centered"><%= discussions.content %></span>
     <% end %>
     <!-- START ARTICLE -->

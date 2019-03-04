@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="319c4656-055a-4322-a989-78d378443113" name="Default Changelist" comment="#719 __ReadME Updated">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/discussions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/discussions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/active_storage/blobs/_blob.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/active_storage/blobs/_blob.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/_dashboard.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_dashboard.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -37,23 +29,23 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Gemfile" value="2" />
-          <entry key="erb" value="5" />
+          <entry key="erb" value="6" />
           <entry key="js" value="1" />
           <entry key="md" value="1" />
-          <entry key="rb" value="9" />
+          <entry key="rb" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="1" />
-          <entry key="RHTML" value="5" />
-          <entry key="Ruby" value="11" />
+          <entry key="RHTML" value="6" />
+          <entry key="Ruby" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="erb" value="1625" />
+          <entry key="erb" value="1748" />
           <entry key="js" value="20" />
           <entry key="md" value="53" />
           <entry key="rb" value="354" />
@@ -62,11 +54,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="33" />
+          <entry key="CSS" value="39" />
           <entry key="JavaScript" value="20" />
           <entry key="Markdown" value="53" />
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="RHTML" value="1592" />
+          <entry key="RHTML" value="1709" />
           <entry key="Ruby" value="354" />
         </counts>
       </usages-collector>
@@ -77,17 +69,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/_dashboard.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="103" selection-start-line="18" selection-start-column="103" selection-end-line="18" selection-end-column="103" />
+            <state relative-caret-position="249">
+              <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/discussions_controller.rb">
+        <entry file="file://$PROJECT_DIR$/app/views/active_storage/blobs/_blob.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="53" lean-forward="true" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -95,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="39" selection-end-column="32" />
+            <state relative-caret-position="328">
+              <caret line="44" column="43" lean-forward="true" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -278,7 +270,7 @@
       <option name="presentableId" value="Default" />
       <updated>1550428129610</updated>
       <workItem from="1550428137745" duration="6789000" />
-      <workItem from="1551681327245" duration="5187000" />
+      <workItem from="1551681327245" duration="6161000" />
     </task>
     <task id="LOCAL-00001" summary="#719 __ReadME Updated">
       <created>1550434816746</created>
@@ -291,7 +283,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11976000" />
+    <option name="totallyTimeSpent" value="12950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="7" width="1273" height="725" extended-state="0" />
@@ -370,10 +362,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/active_storage/blobs/_blob.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        <state relative-caret-position="119">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="44" column="43" lean-forward="true" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -384,24 +383,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/active_storage/blobs/_blob.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="39" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_dashboard.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="103" selection-start-line="18" selection-start-column="103" selection-end-line="18" selection-end-column="103" />
+        <state relative-caret-position="249">
+          <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
         </state>
       </provider>
     </entry>
