@@ -9,22 +9,28 @@
 </section>
 
 <section>
-  <div class="container absolute is-centered rounded bg-white shadow-lg border-b-4 border-bg-grey-lighter">
+  <div class="container w-128 absolute absolute is-centered rounded bg-white shadow-lg border-b-4 border-bg-grey-lighter">
     <% @discussions.each do |discussions| %>
       <div class="bg-indigo-lighter mb-0">
-        <h3 class="clearfix leading-loose text-5xl ml-6 text-black link"><%= link_to @discussion do %>
+        <h3 class="clearfix leading-loose text-5xl ml-6 text-black link"><%= link_to discussions do %>
           <%= discussions.title %>
           <% end %>
           </h3>
       </div>
-      <div>
+      <div class="mb-6">
         <div class="clearfix flex inline-flex justify-center align-items"><%= gravatar_for discussions.user.email %></div>
         <div class="flex flex-wrap inline-flex pin pin-r mr-4 bg-yellow mb-3 px-6 rounded">
           <p class="font-bold text-black flex-wrap"><%= discussions.user.username %>
             . <%= format_date_discussion(discussions.updated_at) %> </p>
         </div>
         <br>
-        <div class="ml-12 font-bold text-sm"> #webdev #rails #sounish</div>
+        <div class="ml-12 text-indigo-darker "> #webdev #rails #sounish</div>
+      </div>
+
+      <div class="flex justify-between">
+        <div class="text-grey-darker text-center bg-grey-light px-4 py-2 m-2"> 👏🏻 87</div>
+        <div class="text-grey-darker text-center bg-grey-light px-4 py-2 m-2"> 💬 22</div>
+        <div class="text-grey-darker flex-wrap justify-end text-center bg-grey-light px-4 py-2 m-2">😓 12</div>
       </div>
     <% end %>
     <!-- START ARTICLE -->
