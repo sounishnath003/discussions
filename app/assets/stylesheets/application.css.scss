@@ -45,4 +45,11 @@
 body{
   background-image: url(back.svg);
   background-attachment: fixed;
+
+  .link {
+    color: black;
+    &:hover {
+      color: #ecee05;
+    }
+  }
 }
