@@ -2,6 +2,8 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
+  has_many :likes, dependent: :destroy
+
   validates :username, presence: :true, uniqueness: { case_sensitive: false }
   validates :email, presence: :true, uniqueness: { case_sensitive: false }
   before_save {self.email = email.downcase}
