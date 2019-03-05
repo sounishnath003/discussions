@@ -1,6 +1,7 @@
 class DiscussionsController < ApplicationController
   before_action :set_discussion, only: [:show, :edit, :update, :destroy]
-  #before_action :authenticate_user!, :except => [:index]
+  before_action :authenticate_user!, :except => [:index]
+  before_action :check_discussion_own_same_user, only: [:edit, :destroy, :update]
 
   # GET /discussions
   # GET /discussions.json
@@ -24,6 +25,11 @@ class DiscussionsController < ApplicationController
 
   # GET /discussions/1/edit
   def edit
+    @discussion = Discussion.find(params[:id])
+    unless current_user.id == @discussion.user_id
+      redirect_to @discussion
+      flash[:notice] = "you shall n't do that !..."
+    end
   end
 
   # POST /discussions
@@ -70,6 +76,11 @@ class DiscussionsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_discussion
       @discussion = Discussion.find(params[:id])
+    end
+
+    def check_discussion_own_same_user
+      if @discussion.user_id = current_user.id
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

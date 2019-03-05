@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     # else
     #   @discussions = Discussion.all.order("created_at DESC")
     # end
-    @discussions = Discussion.all
+    @discussions = Discussion.all.order("created_at DESC")
   end
 
 end # end of class
