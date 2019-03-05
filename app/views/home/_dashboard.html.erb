@@ -31,9 +31,11 @@
       </div>
 
       <div class="flex justify-between">
-        <div class="text-grey-darker text-center bg-grey-light px-4 py-2 m-2"> 👏🏻 87</div>
-        <div class="text-grey-darker text-center bg-grey-light px-4 py-2 m-2"> 💬 22</div>
-        <div class="text-grey-darker flex-wrap justify-end text-center bg-grey-light px-4 py-2 m-2">😓 12</div>
+        <div class="text-grey-darker inline-flex flex-b bg-indigo-dark text-white rounded text-center border border-black px-4 py-2 m-2"> 👏🏻
+          <p class=""><%= discussions.likes.count %><%= discussions.likes.count == 1 ? " Like" : " Likes" %> </p>
+        </div>
+        <div class="text-grey-darker inline-flex flex-b rounded text-center border border-black px-4 py-2 m-2"> 💬 22</div>
+        <div class="text-grey-darker inline-flex bg-red text-white flex-b rounded flex-wrap justify-end text-center border border-black px-4 py-2 m-2">😓 12</div>
       </div>
     <% end %>
     <!-- START ARTICLE -->
