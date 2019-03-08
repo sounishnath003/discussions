@@ -65,13 +65,11 @@ ActiveRecord::Schema.define(version: 2019_03_08_115720) do
 
   create_table "taggings", force: :cascade do |t|
     t.bigint "discussion_id"
-    t.bigint "user_id"
     t.bigint "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["discussion_id"], name: "index_taggings_on_discussion_id"
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
-    t.index ["user_id"], name: "index_taggings_on_user_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -103,5 +101,4 @@ ActiveRecord::Schema.define(version: 2019_03_08_115720) do
   add_foreign_key "likes", "users"
   add_foreign_key "taggings", "discussions"
   add_foreign_key "taggings", "tags"
-  add_foreign_key "taggings", "users"
 end

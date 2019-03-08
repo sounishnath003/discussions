@@ -5,7 +5,12 @@ class HomeController < ApplicationController
     # else
     #   @discussions = Discussion.all.order("created_at DESC")
     # end
-    @discussions = Discussion.all.order("created_at DESC")
-  end
+
+    if params[:tag]
+      @discussions = Discussion.tagged_with(params[:tag])
+    else
+      @discussions = Discussion.all.order("created_at DESC")
+    end #end of if
+  end # method index end
 
 end # end of class

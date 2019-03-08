@@ -10,12 +10,17 @@
   <%= f.rich_text_area :content, input_html: {class: "textarea is-warning"}, wrapper: false, label_html: { class: "label"} %>
 </div>
 
+<div class="form-inputs text input text-indigo-darker mt-6">
+    <%= f.label :all_tags %>
+    <%= f.text_field :all_tags, placeholder: "Tags separated with comma", class: "text-indigo-darker ml-6" %>
+</div>
+
 <div class="form-inputs">
   <%= f.label :ref_photo %>
   <%= f.file_field :ref_photo %>
 </div>
 
-<div class="form-actions">
+<div class="form-actions mt-3">
   <%= f.button :submit, class: "button is-danger mt-5" %>
 </div>
 <% end %>
