@@ -12,7 +12,14 @@
     <%= @discussion.content %>
   </p>
 
-  <%= image_tag @discussion.ref_photo %>
+  <% check_ref_photo = @discussion.ref_photo %>
+  <% if check_ref_photo.present?  %>
+    <%= image_tag @discussion.ref_photo %>
+  <% else %>
+    <div class="tag is-primary p6">
+      <h2 class="subtitle is-3">Photo Needed !!</h2>
+    </div>
+  <% end %>
 
 </div>
 
