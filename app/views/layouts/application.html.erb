@@ -12,6 +12,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <%# <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"> %>
+      <!--material icons-->
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   </head>
 
   <body>
@@ -40,16 +43,17 @@
 <!--                        </a>-->
                             <%= link_to "My Discussions", discussions_path,  class: "navbar-item link text-black" if (user_signed_in?) %>
                     <a class="navbar-item">
-                            Features
+                            <form class="shadow flex" action="/discussions" method="get" accept-charset="UTF-8">
+                              <input type="text" name="tag" id="tag" placeholder="search" class="w-lg rounded bg-white p-2">
+                                <button type="submit" class="bg-white w-auto flex justify-end items-center text-indigo-darker p-2 hover:text-indigo-dark">
+                                  <i class="material-icons text-xl">search</i>
+                                </button>
+                            </form>
+
+
                         </a>
                     <a class="navbar-item">
                             Team
-                        </a>
-                    <a class="navbar-item">
-                            Archives
-                        </a>
-                    <a class="navbar-item">
-                            Help
                         </a>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
