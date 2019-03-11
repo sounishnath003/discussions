@@ -41,17 +41,15 @@
 <!--                    <a class="navbar-item is-active">-->
 <!--                            Discussions-->
 <!--                        </a>-->
-                            <%= link_to "My Discussions", discussions_path,  class: "navbar-item link text-black" if (user_signed_in?) %>
-                    <a class="navbar-item">
-                            <form class="shadow flex" action="/discussions" method="get" accept-charset="UTF-8">
-                              <input type="text" name="tag" id="tag" placeholder="search" class="w-lg rounded bg-white p-2">
-                                <button type="submit" class="bg-white w-auto flex justify-end items-center text-indigo-darker p-2 hover:text-indigo-dark">
-                                  <i class="material-icons text-xl">search</i>
-                                </button>
-                            </form>
-
-
-                        </a>
+                <%= link_to "My Discussions", discussions_path,  class: "navbar-item link text-black" if (user_signed_in?) %>
+            <a class="navbar-item">
+                <form class="shadow flex" action="/discussions" method="get" accept-charset="UTF-8">
+                  <input type="text" name="tag" id="tag" placeholder="search" class="w-lg rounded bg-white p-2">
+                    <button type="submit" class="bg-white w-auto flex justify-end items-center text-indigo-darker p-2 hover:text-indigo-dark">
+                      <i class="material-icons text-xl">search</i>
+                    </button>
+                </form>
+            </a>
                     <a class="navbar-item">
                             Team
                         </a>
