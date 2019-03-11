@@ -14,13 +14,15 @@
     <%# <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"> %>
       <!--material icons-->
        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <!--getin uikit-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.xx.x/css/uikit.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.xx.x/js/uikit.min.js"></script>
   </head>
 
   <body>
 
   <!--Nav bar start-->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
 
@@ -30,11 +32,11 @@
                     </div>
             <% end %>
 
-                <span class="navbar-burger burger" data-target="navbarMenu">
+                <a class="navbar-burger burger"  aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                 <span></span>
                 <span></span>
                 <span></span>
-                </span>
+                </a>
             </div>
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-end">
@@ -44,7 +46,7 @@
                 <%= link_to "My Discussions", discussions_path,  class: "navbar-item link text-black" if (user_signed_in?) %>
             <a class="navbar-item">
                 <form class="shadow flex" action="/discussions" method="get" accept-charset="UTF-8">
-                  <input type="text" name="tag" id="tag" placeholder="search" class="w-lg rounded bg-white p-2">
+                  <input type="text" name="tag" id="tag" placeholder="search" class="w-full rounded bg-white p-2">
                     <button type="submit" class="bg-white w-auto flex justify-end items-center text-indigo-darker p-2 hover:text-indigo-dark">
                       <i class="material-icons text-xl">search</i>
                     </button>
@@ -98,9 +100,39 @@
 
   <% end %>
 
-
-
       <%= yield %>
     </div>
+
+    <!--script for navbar open-->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+
+      </script>
+
   </body>
+
 </html>
