@@ -47,6 +47,8 @@
 body{
   background-image: url(back.svg);
   background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
 
   .link {
     color: black;
